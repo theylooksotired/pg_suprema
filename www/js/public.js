@@ -11,12 +11,10 @@ var app = {
 
 $(document).ready(function(){
     $('.button-qr').click(function(evt){
-        alert(1);
         cordova.plugins.barcodeScanner.scan(
             function (result) {
                 $('.qr-info').html('Felicidades acabas de ganar 10 puntos!<br/><br/>QR:<br/>' + result.text);
                 $('.qr-info').removeClass('hide');
-                alert(2);
                 console.log(result);
             },
             function (error) {
