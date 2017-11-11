@@ -1,0 +1,47 @@
+@import "_reset.scss";
+
+@import "_variables.scss";
+@import "_common.scss";
+@import "_mixins.scss";
+
+@import "_public_header.scss";
+@import "_public_menu.scss";
+@import "_public_footer.scss";
+@import "_public_sidebar.scss";
+
+body,
+html {
+	background: $colorBrand;
+	color: $white;
+}
+
+.hide {
+	display: none;
+}
+
+.button-qr {
+	background: darken($colorBrand, 5%);
+	border: 1px solid darken($colorBrand, 8%);
+	max-width: 200px;
+	display: block;
+	margin: 50px auto 20px auto;
+	padding: 10px;
+	cursor: pointer;
+	text-align: center;
+	@include borderRadius(5px);
+	&:hover {
+		background: darken($colorBrand, 10%);
+	}
+}
+
+.qr-info {
+	background: $white;
+	color: $black;
+	text-align: center;
+	max-width: $sizeMobile;
+	border: 1px solid rgba($black, 0.1);
+	padding: 20px;
+	margin: 20px auto;
+}
+
+@import "_public_responsive.scss";
